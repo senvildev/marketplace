@@ -1,10 +1,12 @@
 header {
-	height: var(--footer-height); width: 100vw;
+	height: var(--header-height); width: 100vw;
 	background-color: blue;
 	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	transition: transform 250ms ease-out;
 
 	& .wrapper {
 		display: flex;
@@ -13,22 +15,59 @@ header {
 		max-width: var(--max-page-width);
 		align-items: center;
 
-		& .logo {
+		& .wrapper.left {
 			justify-self: start;
+		}
+
+		& .wrapper.right {
+			justify-self: end;
+			justify-content: end;
+
+			& * { margin-right: 16px; }
 		}
 	}
 }
 
 main {
 	display: flex;
-	padding-top: var(--footer-height);
+	padding-top: var(--header-height);
 	justify-content: center;
-	height: 10000px;
+	height: 500vh;
 
 	& .wrapper {
 		background-color: green;
 		width: 100%;
 		max-width: var(--max-page-width);
+
+		& #search-bar {
+			height: 150px;
+			background-color: yellow;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&  .input-wrapper {
+				width: 80%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 8px;
+				overflow: hidden;
+				
+				& * { height: 75px; font-size: 1em; }
+				& #search-button {
+					width: 25%;
+					border: 0;
+					box-shadow: 0;
+				}
+				& #search-input-box {
+					width: 75%;
+					border: 0;
+					padding-left: 24px;
+				}
+
+			}
+		}
 	}
 }
 

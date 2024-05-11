@@ -1,0 +1,15 @@
+main {
+	& .wrapper {
+		& #offers {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 150px;
+			background-color: red;
+			& .title p {
+				font-weight: bold;
+				font-size: 1.3rem;
+			}
+		}
+	}
+}

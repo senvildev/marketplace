@@ -1,6 +1,6 @@
 :root {
 	--max-page-width: 1270px;
-	--footer-height: 75px;
+	--header-height: 75px;
 }
 
 * {
@@ -8,6 +8,6 @@
 }
 
 html, body {
-	font-size: 16px;
+	font-size: 18px;
 	font-family: sans-serif;
 }
