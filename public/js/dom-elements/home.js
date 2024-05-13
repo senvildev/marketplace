@@ -1,0 +1,1 @@
+const offers_list_wrapper = document.getElementById("offers-list");

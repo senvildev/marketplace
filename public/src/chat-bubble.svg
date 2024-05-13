@@ -1,0 +1,12 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<g id="chat-bubble">
+		<g id="bubble">
+			<mask id="path-1-inside-1_1_4" fill="white">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C2.89543 2 2 2.89543 2 4V16V21.9904L5.9968 18H20C21.1046 18 22 17.1046 22 16V4C22 2.89543 21.1046 2 20 2H4Z"/>
+			</mask>
+			<path id="background" fill-rule="evenodd" clip-rule="evenodd" d="M4 2C2.89543 2 2 2.89543 2 4V16V21.9904L5.9968 18H20C21.1046 18 22 17.1046 22 16V4C22 2.89543 21.1046 2 20 2H4Z" fill="#00000000"/>
+			<path id="stroke" d="M2 21.9904H0V26.8133L3.41308 23.4057L2 21.9904ZM5.9968 18V16H5.16931L4.58372 16.5847L5.9968 18ZM4 4V0C1.79086 0 0 1.79086 0 4H4ZM4 16V4H0V16H4ZM0 16V21.9904H4V16H0ZM3.41308 23.4057L7.40987 19.4153L4.58372 16.5847L0.586922 20.575L3.41308 23.4057ZM20 16H5.9968V20H20V16ZM20 16V20C22.2091 20 24 18.2091 24 16H20ZM20 4V16H24V4H20ZM20 4H24C24 1.79086 22.2091 0 20 0V4ZM4 4H20V0H4V4Z" fill="black" mask="url(#path-1-inside-1_1_4)"/>
+		</g>
+		<path id="all-text" fill-rule="evenodd" clip-rule="evenodd" d="M18 6H6V8H18V6ZM6 9H18V11H6V9ZM6 12H14V14H6V12Z" fill="white"/>
+	</g>
+</svg>
