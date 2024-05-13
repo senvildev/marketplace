@@ -1,6 +1,19 @@
+/* https://coolors.co/2b193d-2c365e-484d6d-4b8f8c-c5979d */
+
 :root {
 	--max-page-width: 1270px;
 	--header-height: 75px;
+	--page-color: #eee;
+
+	--global-border-radius: 8px;
+
+	--input-box-border-size: 2px;
+
+	--main-color: #2c365e;
+	--secondary-color: #495e75;
+	--active-bookmark-color: #d4af37;
+
+	--homepage-offer-glow: #bfbfbf;
 }
 
 * {
@@ -8,6 +21,12 @@
 }
 
 html, body {
+	background-color: var(--page-color);
+	color: var(--main-color);
 	font-size: 18px;
 	font-family: sans-serif;
+}
+
+img#svg-image {
+	visibility: hidden;
 }

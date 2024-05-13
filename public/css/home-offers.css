@@ -1,14 +1,52 @@
 main {
 	& .wrapper {
 		& #offers {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 150px;
-			background-color: red;
-			& .title p {
-				font-weight: bold;
-				font-size: 1.3rem;
+			& div.title {
+				display: flex;
+				width: 100%; height: 200px;
+				justify-content: center;
+				align-items: center;
+			}
+
+			& #offers-list {
+				display: flex;
+				justify-content: start;
+
+				& .offer.home {
+					width: 320px; height: 350px;
+					margin-left: 10px; margin-right: 10px;
+					display: flex;
+					flex-direction: column;
+					
+					/* exclusive offer transitions */
+					transition: all 0.4s ease-out;
+					&:hover {
+						box-shadow: 0 0 15px var(--homepage-offer-glow);
+						margin-left: 20px; margin-right: 20px;
+					}
+
+					& .offer-image { width: 100%; height: 200px; }
+					& .data-wrapper {
+						display: flex;
+						width: 100%; height: 150px;
+
+						& .offer-data {
+							display: flex; width: 75%;
+							flex-direction: column;
+							padding-top: 12.5px;
+							padding-left: 15px;
+
+							& .offer-price { margin-top: 2px; justify-self: start; }
+							& .offer-city { margin-top: auto; }
+							& .offer-date { margin-bottom: 10px; }
+						}
+						& .offer-button {
+							width: 25%; display: flex;
+							margin-top: 15px;
+							justify-content: center;
+						}
+					}
+				}
 			}
 		}
 	}
