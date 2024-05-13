@@ -1,0 +1,27 @@
+html, body {
+	background-color: var(--main-color);
+}
+
+section#login-screen {
+	width: 500px; height: 700px;
+	background-color: var(--page-color);
+
+	& .form {
+		& .input-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			& svg {
+				width: 42px;
+				height: 42px;
+				& #stroke, & #hole { fill: black; }
+				& #head { stroke: black; }
+			}
+			& input {
+				margin-left: 20px;
+				width: 275px;
+				height: 50px;
+			}
+		}
+	}
+}
