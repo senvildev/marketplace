@@ -19,13 +19,18 @@ function start_webserver(HOSTNAME, PORT)
 	webserver.use(staticPlugin({ assets: 'public', prefix: '' }));
 
 	// redirect the user to /home if they just put the link in
-	webserver.get("/", (request) => {
+	webserver.get("/", () => {
 		return Response.redirect("/home");
 	});
 	
 	// return the homepage file
-	webserver.get("/home", (request) => {
+	webserver.get("/home", () => {
 		return file("public/home.html");
+	});
+
+	// return the login page file
+	webserver.get("/login", () => {
+		return file("public/login.html");
 	});
 
 	// return the product page
