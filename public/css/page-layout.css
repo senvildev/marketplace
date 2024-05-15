@@ -58,7 +58,7 @@ header {
 				}
 		
 				&:hover {
-					margin: 0 35px;
+					padding: 0 18px;
 					text-shadow: var(--glow-effect);
 					& .button-elements svg {
 						filter: drop-shadow(var(--svg-glow-effect));

@@ -1,11 +1,8 @@
 main {
 	& .wrapper {
 		& #offers {
-			& div.title {
-				& p {
-					font-weight: bold;
-					font-size: 1.75rem;
-				}
+			& div.title p {
+				font-weight: bold; font-size: 1.75rem;
 			}
 			& #offers-list {
 				display: flex;
@@ -26,25 +23,19 @@ main {
 								font-size: 0.9rem;
 								font-weight: 300;
 							}
-							& .offer-price {
-								p {
-									font-size: 1.05rem;
-									font-weight: bold;
-									color: var(--main-color);
-								}
+							& .offer-price p {
+								font-size: 1.05rem; font-weight: bold;
+								color: var(--main-color);
 							}
-							& .offer-city {
-								p  {font-size: 0.8rem;font-weight: 300;}
-							}
-							& .offer-date {
-								p { font-size: 0.8rem; font-weight: 400; }
-							}
+							& .offer-city p
+							{ font-size: 0.8rem;font-weight: 300;}
+							& .offer-date p
+							{ font-size: 0.8rem; font-weight: 400; }
 						}
 						& .offer-button {
 							height: 42px; width: 42px;
 							& .bookmark svg {
-								display: block;
-								width: 42px; height: 42px;
+								display: block; width: 42px; height: 42px;
 
 								&, & #stroke, & #background {
 									transition: fill 0.1s ease-out;
