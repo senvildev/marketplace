@@ -95,9 +95,7 @@ main {
 		max-width: var(--max-page-width);
 
 		& #search-bar {
-			height: 150px;
-			/* background-color: yellow; */
-			display: flex;
+			height: 150px; display: flex;
 			justify-content: center;
 			align-items: center;
 
@@ -131,11 +129,12 @@ main {
 					}
 				}
 				& #search-input-box {
+					--input-background: white;
 					width: 100%; border: 0;
-					padding-left: 32px;
-					border-bottom: var(--input-box-border-size) solid white;
-					padding-top: var(--input-box-border-size);
-					box-sizing: border-box;
+					padding-left: 32px; background-color: var(--input-background);
+					border-bottom: var(--input-box-border-size) solid var(--input-background);
+					padding-top: var(--input-box-border-size); box-sizing: border-box;
+					&:focus { border-bottom: var(--input-box-border-size) solid black; }
 				}
 			}
 		}
