@@ -1,12 +1,11 @@
-import { Elysia } from "elysia";
+import { Elysia, t } from "elysia";
 import { cors } from "@elysiajs/cors";
 
-
 // create a backend server
-function start_backend(HOSTNAME, PORT)
+function start_backend(HOSTNAME : string, PORT : number)
 {
 	// declare the backend
-	const backend = new Elysia();
+	const backend : Elysia = new Elysia();
 	backend.use(cors()); // use cors
 
 	// listen on the parsed port and hostname
@@ -17,6 +16,4 @@ function start_backend(HOSTNAME, PORT)
 }
 
 // export the function
-export {
-	start_backend
-}
+export { start_backend }
