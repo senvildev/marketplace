@@ -4,7 +4,8 @@ import { Elysia, t } from "elysia";
 import { cors } from "@elysiajs/cors";
 import { staticPlugin } from "@elysiajs/static";
 
-import { no_caching } from "./modules/middleware-functions";
+// middleware
+import { no_caching } from "./middleware/no-caching";
 
 // start the webserver
 function start_webserver(HOSTNAME : string, PORT : number)
