@@ -5,6 +5,7 @@ An online marketplace template written in **HTML**, **CSS** and **JS**. The proj
 You're required to have these dependencies installed using `bun install` to succesfully start the marketplace template:
 - `elysia`
 - `@elysiajs/cors`
+- `@elysiajs/static`
 
 # running
 To run the server, clone the repository, install the required dependencies, and simply start the `server.js` file using `bun run server.js`.
