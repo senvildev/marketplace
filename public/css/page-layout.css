@@ -33,11 +33,10 @@ header {
 
 			& .button-wrapper {
 				--transition-data: all 0.4s ease-out;
-				--glow-effect: 0 0 15px var(--page-color);
-				--svg-glow-effect: 0 0 15px var(--page-color);
+				--glow-effect: 0 0 15px #959aae;
 				transition: var(--transition-data);
-				margin: 0 15px;
-				cursor: pointer;
+				margin: 0 15px; z-index: 2;
+				cursor: pointer; user-select: none;
 
 				& * { transition: var(--transition-data) }
 				& .button-elements {
@@ -61,7 +60,7 @@ header {
 					padding: 0 18px;
 					text-shadow: var(--glow-effect);
 					& .button-elements svg {
-						filter: drop-shadow(var(--svg-glow-effect));
+						filter: drop-shadow(var(--glow-effect));
 						& #background { fill: var(--page-color); }
 						& #hole { fill: var(--main-color); }
 						& #head { fill: var(--page-color); }
