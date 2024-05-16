@@ -27,7 +27,7 @@ async function show_offers(offer_page)
 		offer_image_wrapper.classList.add("offer-image");
 		
 		const offer_image = document.createElement("img");
-		offer_image.src = "";
+		offer_image.innerHTML = "";
 
 		const data_wrapper_div = document.createElement("div");
 		data_wrapper_div.classList.add("data-wrapper");
@@ -71,10 +71,9 @@ async function show_offers(offer_page)
 			console.log("click");
 		});
 
-		const bookmark_svg = document.createElement("svg");
-		const svg_data = await fetch("/src/bookmark.svg");
-		const parsed_svg_data = await svg_data.text();
-		bookmark_svg.innerHTML = parsed_svg_data;
+		const bookmark_svg = new DOMParser().parseFromString(
+			await get_svg_html("/src/bookmark.svg"), "text/xml"
+		).querySelector("svg");;
 
 		// image
 		offer_div.appendChild(offer_image_wrapper);

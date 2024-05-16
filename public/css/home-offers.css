@@ -44,6 +44,9 @@ main {
 							width: 25%; display: flex;
 							margin-top: 15px;
 							justify-content: center;
+							& .bookmark svg {
+								#stroke { fill: var(--main-color) }
+							}
 						}
 					}
 				}

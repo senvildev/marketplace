@@ -17,7 +17,7 @@ main {
 
 					& .data-wrapper {
 						display: flex;
-						border-top: 1px solid black;
+						border-top: 1px solid var(--main-color);
 						& .offer-data {
 							& .offer-title p {
 								font-size: 0.9rem;

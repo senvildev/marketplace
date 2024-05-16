@@ -11,6 +11,8 @@
 		<title>login</title>
 	</head>
 	<body>
+		<a href="/home">&larr; strona główna</a>
+
 		<div id="animation-circle"></div>
 		<section id="form-screen">
 			<div class="login-wrapper wrapper">
@@ -26,37 +28,47 @@
 						<img src="/src/key.svg" id="svg-image">
 						<input type="password" id="login-password-input" placeholder="Hasło">
 					</div>
-					<div class="selection-wrapper">
-						
+					<div class="finish-wrapper">
+						<button class="finish">
+							Zaloguj się
+						</button>
+						<p>Nie masz konta? <span class="switch-form">Stwórz je</span>!</p>
 					</div>
 				</div>
 			</div>
 			<div class="register-wrapper wrapper">
 				<div class="title-wrapper">
-					<p class="title">Zaloguj się</p>
+					<p class="title">Stwórz konto</p>
 				</div>
 				<div class="form">
-					<div class="input-wrapper">
+					<div class="input-wrapper username">
 						<img src="/src/person.svg" id="svg-image">
 						<input type="text" id="register-username-input" placeholder="Nazwa użytkownika">
 					</div>
-					<div class="input-wrapper">
+					<div class="input-wrapper first-name">
 						<img src="/src/person.svg" id="svg-image">
 						<input type="text" id="register-first-name-input" placeholder="Imię">
 					</div>
-					<div class="input-wrapper">
+					<div class="input-wrapper password">
 						<img src="/src/key.svg" id="svg-image">
 						<input type="password" id="register-password-input" placeholder="Hasło">
 					</div>
-					<div class="selection-wrapper">
-						
+					<div class="finish-wrapper">
+						<button class="finish">
+							Zarejestruj się
+						</button>
+						<p>Masz już konto? <span class="switch-form">Zaloguj się</span>!</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<script src="/js/dom-elements/login.js"></script>
+
 		<script src="/js/global-variables.js"></script>
 		<script src="/js/global-functions.js"></script>
 		<script src="/js/global-main.js"></script>
+
+		<script src="/js/main/login.js"></script>
 	</body>
 </html>
