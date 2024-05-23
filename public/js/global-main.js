@@ -69,4 +69,16 @@ function change_path(item_redirection)
 	} else window.location.pathname = value;
 }
 
+const BACKEND_PORT = 3000;
+async function simple_fetch(path, method, body_data)
+{
+	const url = `${window.location.protocol}//${window.location.hostname}:${BACKEND_PORT}${path}`;
+	console.log(url);
+	const fetch = await fetch(url, {
+			method: method,
+			body: JSON.stringify(body_data)
+		}
+	);
+}
+
 replace_img_svg();

@@ -64,13 +64,13 @@ section#form-screen {
 					background-color: var(--input-background) !important; border: 0; outline: 0;
 					box-sizing: border-box; padding-top: var(--input-box-border-size);
 					border-bottom: var(--input-box-border-size) solid var(--input-background);
-					transition: all 0.2s ease-out;
+					transition: all 0.2s ease-out; filter: none;
 					&:focus {
 						border-bottom: var(--input-box-border-size) solid black;
 						border-bottom-left-radius: 0%; border-bottom-right-radius: 0%;
 					}
 					&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active
-					{ background-color: var(--input-background) !important; transition: background-color 10000s ease-in-out 0s;}
+					{ background-color: var(--input-background) !important; transition: background-color 900000s ease-in-out 0s;}
 				}
 
 				&.first-name {

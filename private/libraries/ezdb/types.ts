@@ -1,5 +1,5 @@
 interface TableStructure {
-	[ index : string ] : string | {
+	[ index : string ] : string | number | {
 		[ index : string ] : string
 	}
 }
@@ -16,7 +16,10 @@ interface PragmaSettings {
 	[ index : string ] : string
 }
 
+type InsertValues = TableStructure[]
+
 export type {
 	TableStructure, FilterStructure,
-	DatabaseTables, PragmaSettings
+	DatabaseTables, PragmaSettings,
+	InsertValues
 }

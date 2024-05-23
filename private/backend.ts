@@ -11,6 +11,11 @@ function start_backend(HOSTNAME : string, PORT : number)
 	// listen on the parsed port and hostname
 	backend.listen({ port: PORT, hostname: HOSTNAME });
 
+	backend.post("/register", ({ body }) => {
+		console.log(body);
+		return "balls";
+	})
+
 	// print out the address if the backend initialized successfully
 	if (backend) console.log(`[!] started backend on http://${HOSTNAME}:${PORT}/`);
 }
