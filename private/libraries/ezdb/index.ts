@@ -11,13 +11,14 @@ class EZDB
 {
 	public database : Database;
 	public database_tables : DatabaseTables;
-	private pragma_settings : PragmaSettings;
+	private pragma_settings : undefined | PragmaSettings;
 
-	constructor(database_path : string, database_tables : DatabaseTables , pragma_settings : PragmaSettings)
+	constructor(database_path : string, database_tables : DatabaseTables , pragma_settings? : PragmaSettings)
 	{
 		this.database = new Database(database_path);
 		this.database_tables = database_tables;
-		this.pragma_settings = pragma_settings;
+		if (pragma_settings)
+			this.pragma_settings = pragma_settings;
 
 		this.prepare_settings();
 		this.prepare_database();
@@ -53,7 +54,7 @@ class EZDB
 		}
 	}
 
-	public find_values(table : string, columns : string[], filters?: FilterStructure) : object[] {
+	public find_values(table : string, columns : string[], filters?: FilterStructure, extra? : string) : object[] {
 		let full_query : string = "SELECT ";
 		for (const i in columns) {
 			full_query += `${columns[i]}, `;
@@ -62,18 +63,18 @@ class EZDB
 
 		if(filters) {
 			full_query += " WHERE";
-			for (const column_iterator in filters)
-			{
+			for (const column_iterator in filters) {
 				const column = filters[column_iterator];
-				full_query += ` ${column_iterator} ${column[0]} ${column[1]}`
+				full_query += ` ${column_iterator} "${column[0]}" ${column[1]}`
 			}
-		}
+		} full_query += ` ${extra != undefined ? extra : ""}`;
+		console.log(full_query);
 
 		const query_results : any[] = this.database.query(full_query).all();
 		return query_results;
 	}
 
-	public add_values(table : string, values : InsertValues, extra : string = "") : void {
+	public add_values(table : string, values : InsertValues) : void {
 		for (const i in values) {
 			let query : string = `INSERT INTO ${table} `;
 			let columns_query : string = "";
@@ -85,7 +86,7 @@ class EZDB
 			}
 			columns_query = columns_query.substring(0, columns_query.length - 2);
 			values_query = values_query.substring(0, values_query.length - 2);
-			query += `(${columns_query}) VALUES(${values_query})` + extra;
+			query += `(${columns_query}) VALUES(${values_query})`;
 			// console.log(query);
 			try {
 				this.database.query(query).run();
@@ -98,22 +99,22 @@ class EZDB
 	}
 }
 
-const db = new EZDB("./db.sqlite3", {
-		users: {
-			username: "varchar(32) primary key",
-			first_name: "varchar(32) not null",
-			password: "varchar(64) not null"
-		},
-		offers: {
-			id: "integer primary key autoincrement",
-			title: "varchar(32) not null",
-			description: "varchar(256) not null",
-			author: "varchar(32) not null",
-			price: "real not null", sold: "bool default false",
-			foreign_keys: { author: "users(username)" }
-		}
-	}, { foreign_keys: "ON" }
-);
+// const db = new EZDB("./db.sqlite3", {
+// 		users: {
+// 			username: "varchar(32) primary key",
+// 			first_name: "varchar(32) not null",
+// 			password: "varchar(64) not null"
+// 		},
+// 		offers: {
+// 			id: "integer primary key autoincrement",
+// 			title: "varchar(32) not null",
+// 			description: "varchar(256) not null",
+// 			author: "varchar(32) not null",
+// 			price: "real not null", sold: "bool default false",
+// 			foreign_keys: { author: "users(username)" }
+// 		}
+// 	}, { foreign_keys: "ON" }
+// );
 
 export {
 	EZDB
@@ -135,16 +136,6 @@ export {
 // 		price: 69420.69
 // 	}
 // ]);
-
-// db.add_values("offers", [
-// 	{
-// 		title: "sztuczny cycek",
-// 		description: "uzywany sztuczny cycek ariany grande",
-// 		author: "jajakraba",
-// 		price: 69000000.00
-// 	}
-// ]);
-
 
 // console.log(db.find_values("users", ["username", "first_name", "password"]));
 // console.log(db.find_values("offers", ["*"]));

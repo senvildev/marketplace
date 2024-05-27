@@ -23,6 +23,7 @@ header {
 				& a {
 					color: var(--page-color);
 					text-decoration: none;
+					user-select: none;
 				}
 			}
 		}

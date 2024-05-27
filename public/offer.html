@@ -8,23 +8,43 @@
 		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/page-layout.css">
 
+		<link rel="stylesheet" href="/css/offer-styling.css">
+		<link rel="stylesheet" href="/css/home-offers.css">
+
 		<title>marketplace</title>
 	</head>
 	<body>
-		
 		<header>
 			<div class="wrapper">
 				<div class="wrapper left">
-					<a href="/home" class="logo">sklep internetowy</a>
+					<div class="logo-wrapper">
+						<a href="/home" class="logo">sklep internetowy</a>
+					</div>
 				</div>
 				<div class="wrapper right">
-					<div class="messages"></div>
-					<div class="user-account">
-						<a href="/profile">profil</a>
+					<div class="saved-offers button-wrapper" id="saved_offers">
+						<div class="button-elements">
+							<img src="/src/bookmark.svg" id="svg-image">
+							<p>Zapisane oferty</p>
+						</div>
 					</div>
-					<button>login</button>
-					<div class="register">
-						<a href="/register">zarejestruj się</a>
+					<div class="messages button-wrapper" id="messages">
+						<div class="button-elements">
+							<img src="/src/chat-bubble.svg" id="svg-image">
+							<p>Wiadomości</p>
+						</div>
+					</div>
+					<div class="user-profile button-wrapper" id="profile">
+						<div class="button-elements">
+							<img src="/src/person.svg" id="svg-image">
+							<p>Twój profil</p>
+						</div>
+					</div>
+					<div class="create-offer button-wrapper" id="create_offer">
+						<div class="button-elements">
+							<img src="/src/product-tag.svg" id="svg-image">
+							<p>Dodaj ofertę</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -42,10 +62,13 @@
 
 		<script src="/js/global-variables.js"></script>
 		<script src="/js/global-functions.js"></script>
-
-		<script src="/js/dom-elements/home.js"></script>
-
 		<script src="/js/global-main.js"></script>
+
+		<script src="/js/dom-elements/global.js"></script>
+
+		<script src="/js/listeners/global.js"></script>
+
+		<script src="/js/main/offer.js"></script>
 
 	</body>
 </html>

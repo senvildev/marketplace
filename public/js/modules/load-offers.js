@@ -1,11 +1,11 @@
 const OFFERS = {
-	id1: {
+	1: {
 		title: "tytul produktu",
 		price: 69420,
 		city: "podlasie",
 		date: "2001-09-11"
 	},
-	id2: {
+	2: {
 		title: "tytul produktu 2",
 		price: 2137.55,
 		city: "podlasie",
@@ -22,6 +22,9 @@ async function show_offers(offer_page)
 		const offer_div = document.createElement("div");
 		offer_div.id = offer_id;
 		offer_div.classList = `offer ${offer_page}`;
+		offer_div.onclick = () => {
+			window.location.pathname = `/offer/${offer_id}`;
+		};
 
 		const offer_image_wrapper = document.createElement("div");
 		offer_image_wrapper.classList.add("offer-image");

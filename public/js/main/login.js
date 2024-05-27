@@ -1,3 +1,7 @@
+function login() {
+	
+}
+
 let CURRENT_FORM = "login";
 
 function switch_form()
@@ -9,7 +13,6 @@ function switch_form()
 	CURRENT_FORM = CURRENT_FORM == "login" ? "register" : "login";
 }
 
-for (const switch_button of switch_form_buttons)
-{
+for (const switch_button of switch_form_buttons) {
 	switch_button.addEventListener("mouseup", switch_form);
 }
