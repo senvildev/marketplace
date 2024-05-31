@@ -118,7 +118,6 @@ class EZDB
         }
 
         try {
-            console.log(query);
             this.database.query(query).run();
         } catch(error) {
             console.warn(`[!!!] error adding values to table ${table}.`);
