@@ -13,14 +13,18 @@
 		"users": {
 			"username": "varchar(32) primary key",
 			"first_name": "varchar(64) not null",
-			"password": "varchar(64) not null"
+			"password": "varchar(64) not null",
+            "creation_date": "date not null"
 		},
 		"offers": {
 			"id": "integer primary key autoincrement",
-			"title": "varchar(32) not null",
+			"title": "varchar(52) not null",
 			"description": "varchar(256) not null",
 			"price": "real not null",
+            "date": "date not null",
 			"author": "varchar(32) not null",
+            "city": "varchar(64) not null",
+            "deleted": "bool default 0",
 			"foreign_keys": { "author": "users(username)" }
 		},
 		"cookies": {

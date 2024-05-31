@@ -1,0 +1,1 @@
+load_offers("promoted_offers", "home", offers_list_wrapper);

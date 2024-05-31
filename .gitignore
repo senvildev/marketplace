@@ -1,2 +1,4 @@
 node_modules/
 **/*.sqlite3
+private/cdn/images/*
+private/cdn/thumbnails/*.png

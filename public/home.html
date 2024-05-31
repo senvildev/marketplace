@@ -22,18 +22,18 @@
 					</div>
 				</div>
 				<div class="wrapper right">
-					<div class="saved-offers button-wrapper" id="saved_offers">
+					<!-- <div class="saved-offers button-wrapper" id="saved_offers">
 						<div class="button-elements">
 							<img src="/src/bookmark.svg" id="svg-image">
 							<p>Zapisane oferty</p>
 						</div>
-					</div>
-					<div class="messages button-wrapper" id="messages">
+					</div> -->
+					<!-- <div class="messages button-wrapper" id="messages">
 						<div class="button-elements">
 							<img src="/src/chat-bubble.svg" id="svg-image">
 							<p>Wiadomości</p>
 						</div>
-					</div>
+					</div> -->
 					<div class="user-profile button-wrapper" id="profile">
 						<div class="button-elements">
 							<img src="/src/person.svg" id="svg-image">
@@ -57,13 +57,13 @@
 					<div class="input-wrapper">
 						<input type="text" id="search-input-box"
 							placeholder="podaj nazwę produktu"
-						> <button id="search-button">szukaj</button>
+						> <button id="search-button">Szukaj</button>
 					</div>
 				</section>
 
 				<section id="offers">
 					<div class="title">
-						<p>dostępne ogłoszenia</p>
+						<p>oferty promowane</p>
 					</div>
 					<div id="offers-list"></div>
 				</section>
@@ -82,10 +82,14 @@
 
 		<script src="/js/dom-elements/global.js"></script>
 		<script src="/js/dom-elements/home.js"></script>
+        <script src="/js/dom-elements/search.js"></script>
 		
 		<script src="/js/listeners/global.js"></script>
+        <script src="/js/listeners/search.js"></script>
 
 		<script src="/js/modules/load-offers.js"></script>
+
+        <script src="/js/main/home.js"></script>
 
 	</body>
 </html>

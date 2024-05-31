@@ -13,7 +13,10 @@
 	--secondary-color: #495e75;
 	--active-bookmark-color: #d4af37;
 
-	--homepage-offer-glow: #bfbfbf;
+	--homepage-offer-glow: #afafaf;
+
+    --thumbnail-height: 200px;
+    --thumbnail-width: 290px;
 }
 
 * {
@@ -29,4 +32,50 @@ html, body {
 
 img#svg-image {
 	visibility: hidden;
+}
+
+button {
+    /* width: 25%; */
+    border: 0; display: inline-block;
+    box-shadow: 0; box-sizing: border-box;
+    background-color: var(--main-color);
+    border: 5px solid var(--main-color);
+    color: white; font-size: 1em;
+    text-wrap: nowrap; font-weight: bold;
+    border-radius: var(--global-border-radius);
+    transition: color 0.1s ease-out,
+                background-color 0.1s ease-out,
+                border-color 0.1s ease-out;
+
+    &:hover {
+        background-color: white;
+        cursor: pointer;
+        color: var(--main-color);
+        border-color: var(--main-color);
+    }
+
+    &:active {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        color: white;
+    }
+}
+
+input, textarea {
+    box-shadow: 0 0 10px var(--homepage-offer-glow);
+    --input-background: white;
+    margin-bottom: 20px; width: 275px; height: 50px;
+    padding-left: 32px; font-size: 0.9rem;
+    border-radius: var(--global-border-radius);
+    background-color: var(--input-background) !important; border: 0; outline: 0;
+    box-sizing: border-box; padding-top: var(--input-box-border-size);
+    border-bottom: var(--input-box-border-size) solid var(--input-background);
+    transition: border-bottom 0.2s ease-out,
+                border-bottom-left-radius 0.2s ease-out,
+                border-bottom-right-radius 0.2s ease-out;
+    filter: none; font-family: sans-serif;
+    &:focus {
+        border-bottom: var(--input-box-border-size) solid black;
+        border-bottom-left-radius: 0%; border-bottom-right-radius: 0%;
+    }
 }

@@ -57,20 +57,12 @@ section#form-screen {
 					& #head { stroke: black; }
 				}
 				& input {
-					--input-background: #ddd;
-					margin-left: 20px; width: 275px; height: 50px;
-					padding-left: 32px; font-size: 0.9rem;
-					border-radius: var(--global-border-radius);
-					background-color: var(--input-background) !important; border: 0; outline: 0;
-					box-sizing: border-box; padding-top: var(--input-box-border-size);
-					border-bottom: var(--input-box-border-size) solid var(--input-background);
-					transition: all 0.2s ease-out; filter: none;
-					&:focus {
-						border-bottom: var(--input-box-border-size) solid black;
-						border-bottom-left-radius: 0%; border-bottom-right-radius: 0%;
-					}
-					&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active
-					{ background-color: var(--input-background) !important; transition: background-color 900000s ease-in-out 0s;}
+                    --input-background: #ddd;
+                    margin: 0; margin-left: 20px;
+					&:-webkit-autofill {
+                        -webkit-box-shadow: 0 0 0px 1000px var(--input-background) inset,
+                                            0 0 10px var(--homepage-offer-glow);
+                    }
 				}
 
 				&.first-name {
@@ -83,7 +75,7 @@ section#form-screen {
 				align-items: center; justify-content: center;
 				margin-top: auto;
 				& button {
-					width: 128px; height: 52px;
+					width: 200px; height: 52px;
 				}
 				& p {
 					font-size: 0.85rem; margin-top: 10px;

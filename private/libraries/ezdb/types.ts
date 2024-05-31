@@ -16,10 +16,14 @@ interface PragmaSettings {
 	[ index : string ] : string
 }
 
+interface UpdateColumnsValues {
+    [ index : string ] : string
+}
+
 type InsertValues = TableStructure[]
 
 export type {
 	TableStructure, FilterStructure,
 	DatabaseTables, PragmaSettings,
-	InsertValues
+	InsertValues, UpdateColumnsValues
 }

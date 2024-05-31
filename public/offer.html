@@ -8,8 +8,9 @@
 		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/page-layout.css">
 
-		<link rel="stylesheet" href="/css/offer-styling.css">
-		<link rel="stylesheet" href="/css/home-offers.css">
+        <link rel="stylesheet" href="/css/offer.css">
+		<!-- <link rel="stylesheet" href="/css/offer-styling.css"> -->
+		<!-- <link rel="stylesheet" href="/css/home-offers.css"> -->
 
 		<title>marketplace</title>
 	</head>
@@ -22,18 +23,18 @@
 					</div>
 				</div>
 				<div class="wrapper right">
-					<div class="saved-offers button-wrapper" id="saved_offers">
+					<!-- <div class="saved-offers button-wrapper" id="saved_offers">
 						<div class="button-elements">
 							<img src="/src/bookmark.svg" id="svg-image">
 							<p>Zapisane oferty</p>
 						</div>
-					</div>
-					<div class="messages button-wrapper" id="messages">
+					</div> -->
+					<!-- <div class="messages button-wrapper" id="messages">
 						<div class="button-elements">
 							<img src="/src/chat-bubble.svg" id="svg-image">
 							<p>Wiadomości</p>
 						</div>
-					</div>
+					</div> -->
 					<div class="user-profile button-wrapper" id="profile">
 						<div class="button-elements">
 							<img src="/src/person.svg" id="svg-image">
@@ -52,7 +53,55 @@
 
 		<main>
 			<div class="wrapper">
-				produkt
+				<div class="offer-wrapper">
+                    <div class="offer-title">
+                        <p id="offer-title" class="title"></p>
+                        <div class="right-wrapper">
+                            <p id="offer-date" class="date"></p>
+                            <a href="" id="delete-button">Usuń ofertę</a>
+                        </div>
+                    </div>
+                    <div class="offer-data">
+                        <div class="image-wrapper">
+                            <div id="thumbnail-image"></div>
+                        </div>
+                        <div class="offer-details">
+                            <div class="author-wrapper wrapper">
+                                <div class="image user">
+                                    <img id="svg-image" src="/src/person.svg" alt="">
+                                </div>
+                                <div class="data">
+                                    <p class="detail-desc">Autor oferty</p>
+                                    <div class="author-wrap">
+                                        <p id="offer-author" class="author"></p>
+                                        <a href="/home" id="offer-username"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper wrapper">
+                                <div class="image price">
+                                    <img id="svg-image" src="/src/product-tag.svg" alt="">
+                                </div>
+                                <div class="data">
+                                    <p class="detail-desc">Cena oferty</p>
+                                    <p id="offer-price" class="price"></p>
+                                </div>
+                            </div>
+                            <div class="city-wrapper wrapper">
+                                <div class="image city">
+                                    <img id="svg-image" src="/src/pin.svg" alt="">
+                                </div>
+                                <div class="data">
+                                    <p class="detail-desc">Lokalizacja oferty</p>
+                                    <p id="offer-city" class="city"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-wrapper">
+                        <p id="offer-description" class="description"></p>
+                    </div>
+                </div>
 			</div>
 		</main>
 
@@ -65,10 +114,12 @@
 		<script src="/js/global-main.js"></script>
 
 		<script src="/js/dom-elements/global.js"></script>
+        <script src="/js/dom-elements/offer.js"></script>
 
 		<script src="/js/listeners/global.js"></script>
 
 		<script src="/js/main/offer.js"></script>
 
+        <script src="/js/listeners/offer.js"></script>
 	</body>
 </html>

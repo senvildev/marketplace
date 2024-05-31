@@ -1,0 +1,1 @@
+delete_offer.onclick = delete_offer_func

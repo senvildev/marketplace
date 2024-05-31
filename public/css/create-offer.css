@@ -1,0 +1,72 @@
+main .wrapper {
+    div.title {
+        display: flex;
+        width: 100%; height: 150px;
+        justify-content: center;
+        align-items: center;
+        p { font-weight: bold; font-size: 1.75rem; }
+    }
+    --width: 500px;
+    .create-wrapper {
+        width: 100%; height: 500px; display: flex;
+        align-items: center; justify-content: center;
+        
+        button {
+            width: 128px; height: 52px;
+        }
+
+        div.thumbnail-preview {
+            display: flex; flex-direction: column;
+            align-items: center; height: 100%;
+            margin-right: 30px;
+            button#offer-thumbnail-button {
+                margin-top: 20px; width: 200px;
+            }
+            div#thumbnail-showcase {
+                display: block; text-align: center;
+                line-height: var(--thumbnail-height);
+                color: black; font-weight: 300; background-color: gray;
+                font-size: 1.5em; border-radius: var(--global-border-radius);
+                box-shadow: 0 0 10px var(--homepage-offer-glow);
+                text-transform: uppercase;
+                height: var(--thumbnail-height);
+                width: var(--thumbnail-width);
+            }
+        }
+        div.form-wrapper {
+            textarea {
+                width: var(--width); height: 200px;
+                resize: none;
+                white-space: pre-line;
+
+                padding-top: 1em;
+                border: var(--global-border-radius);
+                &:focus {
+                    border: var(--global-border-radius);
+                    border-bottom-left-radius: var(--global-border-radius);
+                    border-bottom-right-radius: var(--global-border-radius);
+                }
+                white-space: pre-line;
+            }
+
+            #offer-title {
+                width: var(--width); height: 52px;
+            }
+            #offer-price {
+                width: var(--width); height: 52px;
+                appearance: initial;
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                    -webkit-appearance: none; margin: 0;
+                }
+            }
+
+            #offer-city {
+                width: var(--width);
+            }
+
+            button#submit-offer {
+                width: 175px;
+            }
+        }
+    }
+}

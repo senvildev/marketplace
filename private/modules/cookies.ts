@@ -13,16 +13,19 @@ function create_cookie() {
 	return cookie;
 }
 
-function save_cookie(database : EZDB, username : string, cookie : string) {
+function check_cookie(database : EZDB, full_cookie : string) : boolean {
+    const separate_cookie = full_cookie.split("$$$");
+    const username = separate_cookie[0];
+    const cookie = separate_cookie[1];
 
-}
-
-function check_cookie(database : EZDB, username : string, cookie : string) {
-	const results : object[] = database.find_values("cookies", ["id"], undefined, "order by id desc");
-	console.log(results);
+    const check_cookie : any = database.find_values("cookies", ["cookie"],
+        { "user like": [username, ""] },
+        "order by id desc"
+    );
+    const latest_cookie = check_cookie[0].cookie;
+    return cookie == latest_cookie;
 }
 
 export {
-	create_cookie, save_cookie,
-	check_cookie
+	create_cookie, check_cookie
 }

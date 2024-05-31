@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/page-layout.css">
+        
+        <link rel="stylesheet" href="/css/profile-offers.css">
+        <link rel="stylesheet" href="/css/profile-offer-styling.css">
+
+        <link rel="stylesheet" href="/css/profile.css">
+
+        <title>profil</title>
+    </head>
+    <body>
+        <header>
+			<div class="wrapper">
+				<div class="wrapper left">
+					<div class="logo-wrapper">
+						<a href="/home" class="logo">sklep internetowy</a>
+					</div>
+				</div>
+				<div class="wrapper right">
+					<!-- <div class="saved-offers button-wrapper" id="saved_offers">
+						<div class="button-elements">
+							<img src="/src/bookmark.svg" id="svg-image">
+							<p>Zapisane oferty</p>
+						</div>
+					</div> -->
+					<!-- <div class="messages button-wrapper" id="messages">
+						<div class="button-elements">
+							<img src="/src/chat-bubble.svg" id="svg-image">
+							<p>Wiadomości</p>
+						</div>
+					</div> -->
+					<div class="user-profile button-wrapper" id="profile">
+						<div class="button-elements">
+							<img src="/src/person.svg" id="svg-image">
+							<p>Twój profil</p>
+						</div>
+					</div>
+					<div class="create-offer button-wrapper" id="create_offer">
+						<div class="button-elements">
+							<img src="/src/product-tag.svg" id="svg-image">
+							<p>Dodaj ofertę</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="wrapper">
+				<div class="profile-wrapper">
+                    <div class="profile-username">
+                        <p id="profile-username" class="username">username</p>
+                        <a href="/home" id="logout-button">Wyloguj się</a>
+                    </div>
+                    <div class="profile-data">
+                        <div class="first-name-wrapper wrapper">
+                            <div class="image first-name">
+                                <img id="svg-image" src="/src/person.svg" alt="">
+                            </div>
+                            <div class="data">
+                                <p class="detail-desc">Imię</p>
+                                <p id="profile-first-name" class="first-name"></p>
+                            </div>
+                        </div>
+                        <div class="available-wrapper wrapper">
+                            <div class="image available">
+                                <img id="svg-image" src="/src/product-tag.svg" alt="">
+                            </div>
+                            <div class="data">
+                                <p class="detail-desc">Dostępne oferty</p>
+                                <p id="profile-available" class="available"></p>
+                            </div>
+                        </div>
+                        <div class="creation-wrapper wrapper">
+                            <div class="image creation">
+                                <img id="svg-image" src="/src/pin.svg" alt="">
+                            </div>
+                            <div class="data">
+                                <p class="detail-desc">Użytkownik od</p>
+                                <p id="profile-creation" class="creation"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offers-wrapper">
+                        <div class="offers-wrapper-title">
+                            <p>Wystawione oferty</p>
+                        </div>
+                        <div id="offers-list">
+
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+
+        <script src="/js/global-variables.js"></script>
+		<script src="/js/global-functions.js"></script>
+		<script src="/js/global-main.js"></script>
+
+		<script src="/js/dom-elements/global.js"></script>
+        <script src="/js/dom-elements/profile.js"></script>
+
+        <script src="/js/listeners/global.js"></script>
+        <script src="/js/listeners/profile.js"></script>
+
+        <script src="/js/modules/load-offers.js"></script>
+
+        <script src="/js/main/profile.js"></script>
+    </body>
+</html>

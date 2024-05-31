@@ -1,0 +1,50 @@
+& #offers-list {
+    display: flex;
+    /* justify-content: center; */
+
+    & .offer.home {
+        background-color: white; cursor: pointer;
+        border-radius: var(--global-border-radius);
+        overflow: hidden; user-select: none;
+
+        & .offer-image { background-color: gray; }
+
+        & .data-wrapper {
+            display: flex;
+            border-top: 1px solid var(--main-color);
+            & .offer-data {
+                & .offer-title p {
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                }
+                & .offer-price p {
+                    font-size: 1.05rem; font-weight: bold;
+                    color: var(--main-color);
+                }
+                & .offer-city p {
+                    font-size: 0.8rem;font-weight: 300;
+                    text-overflow: ellipsis; white-space: nowrap;
+                    overflow: hidden;
+                }
+                & .offer-date p
+                { font-size: 0.8rem; font-weight: 400; }
+            }
+            & .offer-button {
+                height: 42px; width: 42px;
+                & .bookmark svg {
+                    display: block; width: 42px; height: 42px;
+
+                    &, & #stroke, & #background {
+                        transition: fill 0.1s ease-out;
+                    }
+                    & #stroke { fill: black; }
+                    & #background { fill: #00000000;}
+                    &:hover {
+                        & #stroke, & #background 
+                        { fill: var(--active-bookmark-color); }
+                    }
+                }
+            }
+        }
+    }
+}

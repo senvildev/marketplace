@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/page-layout.css">
 
-        <link rel="stylesheet" href="/css/offer-styling.css">
-        <link rel="stylesheet" href="/css/search-offers.css">
-
-        <title>wyniki dla</title>
+        <link rel="stylesheet" href="/css/create-offer.css">
+        
+        <title>create offer</title>
     </head>
     <body>
         <header>
@@ -51,24 +50,25 @@
 		</header>
 
         <main>
-			<div class="wrapper">
-
-				<section id="search-bar">
-					<div class="input-wrapper">
-						<input type="text" id="search-input-box"
-							placeholder="podaj nazwę produktu"
-						> <button id="search-button">Szukaj</button>
-					</div>
-				</section>
-
-				<section id="offers">
-					<div class="title">
-						<p id="title-p">Wyniki wyszukiwania</p>
-					</div>
-					<div id="offers-list"></div>
-				</section>
-
-			</div>
+            <div class="wrapper">
+                <div class="title">
+                    <p>stwórz ofertę</p>
+                </div>
+                <div class="create-wrapper">
+                    <div class="thumbnail-preview">
+                        <div id="thumbnail-showcase">brak miniaturki</div>
+                        <button id="offer-thumbnail-button">Wybierz miniaturę</button>
+                    </div>
+                    <div class="form-wrapper">
+                        <input type="text" id="offer-title" placeholder="Nazwa oferty" maxlength="52"><br>
+                        <input type="number" id="offer-price" placeholder="Cena" min="0"><br>
+                        <textarea name="" id="offer-description" maxlength="256" placeholder="Opis oferty"></textarea><br>
+                        <input type="text" id="offer-city" placeholder="Lokalizacja" maxlength="64"><br>
+                        <input type="file" id="offer-thumbnail" accept=".png,.jpg" style="display: none;">
+                        <button id="submit-offer">Stwórz ofertę</button>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <script src="/js/global-variables.js"></script>
@@ -76,13 +76,11 @@
 		<script src="/js/global-main.js"></script>
 
 		<script src="/js/dom-elements/global.js"></script>
-        <script src="/js/dom-elements/search.js"></script>
+        <script src="/js/dom-elements/create-offer.js"></script>
 
         <script src="/js/listeners/global.js"></script>
-        <script src="/js/listeners/search.js"></script>
-        
-        <script src="/js/modules/load-offers.js"></script>
+        <script src="/js/listeners/create-offer.js"></script>
 
-        <script src="/js/main/search.js"></script>
+        <script src="/js/main/create-offer.js"></script>
     </body>
 </html>

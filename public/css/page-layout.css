@@ -87,7 +87,7 @@ main {
 	display: flex;
 	padding-top: var(--header-height);
 	justify-content: center;
-	height: 500vh;
+    margin-bottom: 50px;
 
 	& .wrapper {
 		/* background-color: green; */
@@ -100,8 +100,8 @@ main {
 			align-items: center;
 
 			&  .input-wrapper {
-				width: 80%;
-				display: flex;
+                box-shadow: 0 0 100px var(--homepage-offer-glow);
+				width: 80%; display: flex;
 				justify-content: center;
 				align-items: center;
 				border-radius: var(--global-border-radius);
@@ -110,31 +110,22 @@ main {
 				& * { height: 75px; font-size: 1em; }
 				& #search-button {
 					width: 25%;
-					border: 0;
-					box-shadow: 0;
-					background-color: var(--main-color);
-					color: white;
-
-					&:hover {
-						background-color: white;
-						cursor: pointer;
-						color: var(--main-color);
-						border: 5px solid var(--main-color);
-					}
-
-					&:active {
-						background-color: var(--secondary-color);
-						border-color: var(--secondary-color);
-						color: white;
-					}
+                    border-radius: 0;
 				}
 				& #search-input-box {
-					--input-background: white;
+                    margin: 0;
+                    width: 100%;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+					/* --input-background: white;
 					width: 100%; border: 0;
 					padding-left: 32px; background-color: var(--input-background);
 					border-bottom: var(--input-box-border-size) solid var(--input-background);
 					padding-top: var(--input-box-border-size); box-sizing: border-box;
-					&:focus { border-bottom: var(--input-box-border-size) solid black; }
+                    transition: all 0.2s ease-out; filter: none;
+					&:focus {
+						border-bottom: var(--input-box-border-size) solid black;
+					} */
 				}
 			}
 		}
