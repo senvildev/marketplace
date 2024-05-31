@@ -40,10 +40,11 @@ async function set_offer_data(offer_id) {
         // check cookie
         const data = new FormData();
         data.append("full_cookie", localStorage.getItem("cookie"));
+        data.append("username", offer_data.author)
         const check_cookie = await simple_fetch("/check_cookie", "POST", data);
         if (check_cookie) {
             delete_offer.style.display = "block";
-            delete_offer.href = "#";
+            // delete_offer.href = "/home";
         }
 
     } else window.location.pathname = "/home";

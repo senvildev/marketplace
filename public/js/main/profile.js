@@ -16,6 +16,7 @@ async function load_profile_data() {
 async function check_access_cookie() {
     const data = new FormData();
     data.append("full_cookie", localStorage.getItem("cookie") != undefined ? localStorage.getItem("cookie") : "");
+    data.append("username", path[1]);
     const check_cookie = await simple_fetch("/check_cookie", "POST", data);
     if (check_cookie) {
         logout_button.style.display = "block";

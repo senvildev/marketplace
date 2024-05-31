@@ -25,7 +25,7 @@ main .wrapper {
                     font-size: 1.15rem;
                 }
                 & a#delete-button {
-                    color: red; font-size: 1.2rem;
+                    color: red; font-size: 1.2rem; cursor: pointer;
                     text-decoration: none; margin-left: auto;
                     padding: 0 25px; display: none;
                 }

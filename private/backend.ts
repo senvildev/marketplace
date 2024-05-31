@@ -19,7 +19,8 @@ interface LoginData {
 }
 
 interface CheckCookieData {
-    full_cookie : string
+    full_cookie : string,
+    username? : string
 }
 
 interface GetOffersQuery {
@@ -120,7 +121,12 @@ function start_backend(HOSTNAME : string, PORT : number)
         const full_cookie : string = body.full_cookie;
 
         try {
-            const check_cookie_res : boolean = check_cookie(database, full_cookie);
+            let check_cookie_res : boolean;
+            if (body.username != undefined) {
+                check_cookie_res = check_cookie(database, full_cookie, body.username);
+            } else {
+                check_cookie_res = check_cookie(database, full_cookie);
+            }
 
             if (check_cookie_res)
                 return 1;

@@ -68,6 +68,7 @@ async function change_path(item_redirection)
         const data = new FormData();
         data.append("full_cookie", localStorage.getItem("cookie") != undefined ? localStorage.getItem("cookie") : "");
 		const check_cookie = await simple_fetch("/check_cookie", "POST", data);
+        console.log(check_cookie)
 		window.location.pathname = value[check_cookie ? 1 : 0];
         if (item_redirection == "user-profile" && check_cookie)
             window.location.pathname = value[check_cookie] + "/" + localStorage.getItem("cookie").split("$$$")[0];
