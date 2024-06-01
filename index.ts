@@ -7,6 +7,6 @@ import {
 	BACKEND_PORT, WEBSERVER_PORT, WEBSOCKET_PORT, CDN_PORT
 } from "./config.json";
 
+start_webserver(HOSTNAME, WEBSERVER_PORT);
 start_backend(HOSTNAME, BACKEND_PORT);
 start_cdn(HOSTNAME, CDN_PORT);
-start_webserver(HOSTNAME, WEBSERVER_PORT);
