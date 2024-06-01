@@ -1,6 +1,5 @@
 {
 	"build": {
-		"functions": "*.ts",
 		"command": "bun run build"
 	}
 }
