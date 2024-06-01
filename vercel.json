@@ -1,6 +1,5 @@
 {
 	"build": {
-		"src": "index.ts",
 		"functions": "*.ts",
 		"command": "bun run build"
 	}
