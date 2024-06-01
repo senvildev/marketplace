@@ -1,0 +1,13 @@
+{
+	"builds": [
+		"src": "",
+		"use": "@vercel/build",
+		"config": {
+			"commands": [
+				"bun install",
+				"bun build"
+			],
+			"output": "/"
+		}
+	]
+}
