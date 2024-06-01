@@ -1,13 +1,8 @@
 {
-	"builds": [
-		"src": "",
-		"use": "@vercel/build",
-		"config": {
-			"commands": [
-				"bun install",
-				"bun build"
-			],
-			"output": "/"
+	"rewrites": [
+		{
+			"source": "/(.*)",
+			"destination": "/"
 		}
 	]
 }
