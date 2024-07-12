@@ -8,7 +8,7 @@ You're required to have these dependencies installed using `bun install` to succ
 - `@elysiajs/static`
 
 # running
-To run the server, clone the repository, install the required dependencies, and simply start the `server.js` file using `bun run server.js`.
+To run the server, clone the repository, install the required dependencies, and simply start the `index.ts` file using `bun run index.ts`.
 
 # credits
 This is a solo project. All credit goes to me.
